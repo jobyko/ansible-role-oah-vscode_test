@@ -2,6 +2,7 @@
 # tasks file for vscode
 
 - name: import os specific tasks
+  become: yes
   include_tasks: "os_{{ ansible_os_family }}.yml"
 
 - name: install extension
